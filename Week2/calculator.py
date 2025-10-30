@@ -1,4 +1,5 @@
-"""Repeatable calculator"""
+"""Repeatable calculator
+"""
 
 from typing import Optional
 
@@ -51,37 +52,39 @@ def choose_operation() -> str:
 
 def main() -> None:
     print("My Python Calculator\n")
-    try:
-        num1 = get_number("Enter first number: ")
-        num2 = get_number("Enter second number: ")
-    except SystemExit:
-        return
+    while True:
+        try:
+            num1 = get_number("Enter first number: ")
+            num2 = get_number("Enter second number: ")
+        except SystemExit:
+            return
 
-    op = choose_operation()
+        op = choose_operation()
 
-    if op == "exit":
-        print("Exiting.")
-        return
+        if op == "exit":
+            print("Exiting.")
+            break
 
-    if op == "+":
-        result = num1 + num2
-    elif op == "-":
-        result = num1 - num2
-    elif op == "*":
-        result = num1 * num2
-    elif op == "/":
-        if num2 == 0.0:
-            result = None
+        if op == "+":
+            result = num1 + num2
+        elif op == "-":
+            result = num1 - num2
+        elif op == "*":
+            result = num1 * num2
+        elif op == "/":
+            if num2 == 0.0:
+                result = None
+            else:
+                result = num1 / num2
         else:
-            result = num1 / num2
-    else:
-        # Shouldn't happen
-        print("Unexpected operation.")
-        return
+            # Shouldn't happen
+            print("Unexpected operation.")
+            break
 
-    # Display
-    print()
-    print(f"({format_num(num1)} {op} {format_num(num2)}) = {format_num(result)}")
+        # Display
+        print()
+        print(f"({format_num(num1)} {op} {format_num(num2)}) = {format_num(result)}")
+        print()
 
 
 if __name__ == "__main__":
