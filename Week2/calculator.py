@@ -1,5 +1,4 @@
-"""Repeatable calculator
-"""
+"""Repeatable calculator"""
 
 from typing import Optional
 
