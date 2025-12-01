@@ -1,6 +1,4 @@
 # cybersecurity_prototype.py
-# Functional prototype using tuples, dictionaries, and exception handling
-
 def check_event(event):
     """
     Checks an event against known threat patterns stored in a dictionary.
