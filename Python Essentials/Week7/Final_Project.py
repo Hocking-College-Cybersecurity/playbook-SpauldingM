@@ -7,9 +7,10 @@ from datetime import datetime
 # EMAIL ALERT FUNCTION
 
 def send_email_alert(subject, message, to_email):
-    #configure your credentials here
+    #configure your credentials here, if using gmail, you'll need app password
     from_email = "your_email@example.com"
     password = "your_email_password"
+    to_email = "receiver@example.com"
 
     #create the message here
     msg = MIMEText(message)
