@@ -3,6 +3,8 @@ import smtplib
 from email.mime.text import MIMEText
 from datetime import datetime
 
+#to start the program, best to save it to the desktop under 'Monitor.py'. go to command prompt, type 'cd Desktop' then 'python Monitor.py'
+# This program simulates a cybersecurity monitoring system that checks for suspicious events and sends email alerts when threats are detected.
 
 # EMAIL ALERT FUNCTION
 
